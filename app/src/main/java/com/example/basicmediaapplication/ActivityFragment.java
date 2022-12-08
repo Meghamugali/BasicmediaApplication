@@ -24,7 +24,7 @@ public class ActivityFragment extends Fragment {
     RecyclerView recyclerview;
 
     String s1[];
-    int images[]= {R.drawable.ic_baseline_image_24,R.drawable.ic_baseline_video_library_24,R.drawable.ic_baseline_audio_file_24};
+    int images[]= { R.drawable.ic_baseline_image_24,R.drawable.ic_baseline_video_library_24,R.drawable.ic_baseline_audio_file_24 };
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

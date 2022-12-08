@@ -7,4 +7,22 @@
         <item>Videos</item>
         <item>Audio</item>
     </string-array>
+
+    <string-array name="Photos">
+        <item>Prints and Gifts</item>
+        <item>Genius</item>
+        <item>Content Restore</item>
+        <item>Content Cleanup</item>
+        <item>Space Saver</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Print photos, order a canvas or mug or more, right from Capsyl</item>
+        <item>Test drive new features, and let our team know what you think</item>
+        <item>Download content from Capsyl back to your device </item>
+        <item>Free up storage by cleaning up unwanted clutter</item>
+        <item>Free up space on your device by removing content already in Capsyl</item>
+    </string-array>
+
+
 </resources>

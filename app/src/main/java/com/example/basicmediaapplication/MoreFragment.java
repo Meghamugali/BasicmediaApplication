@@ -2,7 +2,11 @@ package com.example.basicmediaapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +18,10 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class MoreFragment extends Fragment {
+    RecyclerView recyclerview;
+
+    String s1[],s2[];
+    int images[]= { R.drawable.ic_baseline_card_giftcard_24,R.drawable.ic_baseline_cruelty_free_24,R.drawable.ic_baseline_restore_24,R.drawable.ic_baseline_content_cut_24,R.drawable.ic_baseline_savings_24};
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,6 +61,7 @@ public class MoreFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -60,5 +69,25 @@ public class MoreFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_more, container, false);
+
     }
-}
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        dataInitialize();
+        recyclerview = view.findViewById(R.id.recyclerView);
+        recyclerview.setHasFixedSize(true);
+        s1=getResources().getStringArray(R.array.Photos);
+        s2=getResources().getStringArray(R.array.description);
+        Adapter adapter = new Adapter(getContext(),s1,s2,images);
+        recyclerview.setAdapter(adapter);
+        recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter.notifyDataSetChanged();
+    }
+
+    private void dataInitialize() {
+
+    }
+    }
