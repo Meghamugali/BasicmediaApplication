@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BasicmediaApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Library">
+        <item>Photos</item>
+        <item>Videos</item>
+        <item>Audio</item>
+    </string-array>
+</resources>
