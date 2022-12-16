@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,7 +21,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         context = ct;
         data1 = s1;
         data2 = s2;
-        images = img;
+      images = img;
 
     }
 
@@ -62,11 +61,32 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         @Override
         public void onClick(View view) {
-//            int position = getAdapterPosition();
-//            Toast.makeText(view.getContext(), "position"+position, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(view.getContext(),PrintandgiftActivity.class);
-            view.getContext().startActivity(intent);
+            switch (getAdapterPosition()){
+                case 0:
+                    Intent intent = new Intent(view.getContext(),PrintandgiftActivity.class);
+                    view.getContext().startActivity(intent);
+                    break;
+                case 1:
+                    Intent intent1 = new Intent(view.getContext(),GeniusActivity.class);
+                    view.getContext().startActivity(intent1);
+                    break;
+                case 2:
+                    Intent intent2 = new Intent(view.getContext(),ContentRestoreActivity.class);
+                    view.getContext().startActivity(intent2);
+                    break;
+                case 3:
+                    Intent intent3 = new Intent(view.getContext(),ContentCleanupActivity.class);
+                    view.getContext().startActivity(intent3);
+                    break;
+                case 4:
+                    Intent intent4 = new Intent(view.getContext(),SpaceSaverActivity.class);
+                    view.getContext().startActivity(intent4);
+                    break;
+                default:
+                    break;
+            }
 
         }
+
     }
 }

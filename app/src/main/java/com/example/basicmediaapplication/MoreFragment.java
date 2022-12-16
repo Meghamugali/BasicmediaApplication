@@ -81,7 +81,7 @@ public class MoreFragment extends Fragment {
         recyclerview.setHasFixedSize(true);
         s1=getResources().getStringArray(R.array.Photos);
         s2=getResources().getStringArray(R.array.description);
-        Adapter adapter = new Adapter(getContext(),s1,s2,images);
+        Adapter adapter = new Adapter(getContext(),s1,s2, images);
         recyclerview.setAdapter(adapter);
         recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter.notifyDataSetChanged();
